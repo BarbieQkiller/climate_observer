@@ -32,13 +32,13 @@ services:
     depends_on:
       - influxdb
   sensor1:
-    image: sensor:latest
+    image: barbieqkiller/sensor:latest
     environment:
       - INFLUX_TOKEN=${INFLUX_TOKEN}
       - INFLUX_URL=http://influxdb:8086/write?db=my-bucket
       - SENSOR_NAME=sensor1
   sensor2:
-    image: sensor:latest
+    image: barbieqkiller/sensor:latest
     environment:
       - INFLUX_TOKEN=${INFLUX_TOKEN}
       - INFLUX_URL=http://influxdb:8086/write?db=my-bucket
